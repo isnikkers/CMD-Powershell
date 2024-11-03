@@ -1,0 +1,31 @@
+CMD/Powershell commands
+
+list the tasks and save them in a file
+tasklist > FILENAME.txt
+
+enumerate users
+net users
+
+users that have admin access
+net localgroup administrators
+
+that has RDP access
+net localgroup "Remote Desktop Users"
+
+retrieve all properties relating to a local account
+Get-LocalUser -Name ServiceeAccount | Select *
+
+Lists services on the system
+Get-Service | Where Status -eq "Running" | Out-GridView
+
+List of scheduled tasks
+Get-ScheduledTask | Where State -eq "Ready"
+
+DEEPBLUE CLI
+To open Deepblue:
+.\DeepBlue.ps1 
+add below to execute command (basically file path of the target evtx
+.\evtx\password-spray.evtx
+
+To look at all of the event logs at once and export it to a text file, we can use the following argument (use wildcard)
+./DeepBlue.ps1 .\evtx\* > output.txt
