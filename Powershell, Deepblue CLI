@@ -29,3 +29,6 @@ add below to execute command (basically file path of the target evtx
 
 To look at all of the event logs at once and export it to a text file, we can use the following argument (use wildcard)
 ./DeepBlue.ps1 .\evtx\* > output.txt
+
+VOLATILITY
+.\vol.exe -f .\VictimMemory.raw windows.netscan.NetScan Volatility 3 Framework 2.4.1
